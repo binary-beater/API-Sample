@@ -13,6 +13,30 @@ A simple Spring Boot application with MySQL that provides REST APIs to manage bo
 
 ---
 
+## Project Structure
+
+```text
+springboot-book-api/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── bookapi/
+│       │       ├── BookApplication.java
+│       │       ├── controller/
+│       │       │   └── BookController.java
+│       │       ├── model/
+│       │       │   └── Book.java
+│       │       └── repository/
+│       │           └── BookRepository.java
+│       └── resources/
+│           └── application.properties
+├── index.html
+├── pom.xml
+├── .gitignore
+└── README.md
+
+---
+
 ## 📚 API Endpoints
 
 | Method | Endpoint           | Description           |
