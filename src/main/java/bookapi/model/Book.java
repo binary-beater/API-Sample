@@ -9,6 +9,7 @@ public class Book {
     private Long id;
     private String title;
     private String author;
+    @Column(name = "\"year\"")
     private int year;
 
     public Book() {
@@ -17,6 +18,11 @@ public class Book {
     // All-arg constructor (used in tests)
     public Book(Long id, String title, String author, int year) {
         this.id = id;
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+    public Book(String title, String author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;

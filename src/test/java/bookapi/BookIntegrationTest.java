@@ -35,4 +35,25 @@ public class BookIntegrationTest {
         assertNotNull(found);
         assertEquals("Integration Test Book", found.getTitle());
     }
+    @Test
+    void shouldUpdateBook() {
+        Book book = new Book("Original Title", "Original Author", 2020);
+        Book saved = bookRepository.save(book);
+
+        saved.setTitle("Updated Title");
+        Book updated = bookRepository.save(saved);
+
+        assertEquals("Updated Title", updated.getTitle());
+    }
+
+    @Test
+    void shouldDeleteBook() {
+        Book book = new Book("Delete Title", "Del Author", 2018);
+        Book saved = bookRepository.save(book);
+        Long id = saved.getId();
+
+        bookRepository.deleteById(id);
+        assertFalse(bookRepository.findById(id).isPresent());
+    }
+
 }
