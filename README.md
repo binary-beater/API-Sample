@@ -16,20 +16,44 @@ A simple Spring Boot application with MySQL that provides REST APIs to manage bo
 ## Project Structure
 
 ```text
-springboot-book-api/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── bookapi/
-│       │       ├── BookApplication.java
-│       │       ├── controller/
-│       │       │   └── BookController.java
-│       │       ├── model/
-│       │       │   └── Book.java
-│       │       └── repository/
-│       │           └── BookRepository.java
-│       └── resources/
-│           └── application.properties
+API-Sample
+│
+├───.vscode
+│
+├───images
+│       code_coverage.png
+│       output_build.png
+│
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───bookapi
+│   │   │       │   BookApplication.java
+│   │   │       │
+│   │   │       ├───controller
+│   │   │       │       BookController.java
+│   │   │       │
+│   │   │       ├───model
+│   │   │       │       Book.java
+│   │   │       │
+│   │   │       └───repository
+│   │   │               BookRepository.java
+│   │   │
+│   │   └───resources
+│   │           application.properties
+│   │
+│   └───test
+│       ├───java
+│       │   └───bookapi
+│       │       │   APITest.java
+│       │       │   BookIntegrationTest.java
+│       │       │
+│       │       └───controller
+│       │               BookControllerTest.java
+│       │
+│       └───resources
+│               application-test.properties
+│               schema.sql
 ├── index.html
 ├── pom.xml
 ├── .gitignore
@@ -156,6 +180,42 @@ curl -X PUT http://localhost:8080/api/books/1 -H "Content-Type: application/json
 ```bash
 curl -X DELETE http://localhost:8080/api/books/1
 ```
+
+---
+
+## Test Result
+![Test Result](images/output_build.png)
+
+---
+
+## Code-coverage
+![Coverage Report](images/code_coverage.png)
+
+---
+## Running Tests
+Run all unit and integration tests using Maven with:
+
+```bash
+mvn clean test
+```
+
+---
+
+## Generating Code Coverage Report
+After running tests, generate the JaCoCo code coverage report using:
+
+```bash
+mvn jacoco:report
+```
+
+### Viewing the Report
+Open the generated report at:
+
+```bash
+target/site/jacoco/index.html
+```
+
+Open this file in your browser to see detailed coverage statistics including which classes and methods are covered by tests.
 
 ---
 
