@@ -1,5 +1,2 @@
 # Ignore Maven build output
 /target
-
-# Ignore VS Code settings
-.vscode/

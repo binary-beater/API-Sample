@@ -11,6 +11,16 @@ public class Book {
     private String author;
     private int year;
 
+    public Book() {
+    }
+
+    // All-arg constructor (used in tests)
+    public Book(Long id, String title, String author, int year) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
