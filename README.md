@@ -219,6 +219,14 @@ Open this file in your browser to see detailed coverage statistics including whi
 
 ---
 
+### Keploy AI API Testing Dashboard
+
+Below is the screenshot of the Keploy test results validating the API functionality:
+
+![Keploy Testing Report](Test-result/keploy-testsuite.png)
+
+---
+
 ## 💡 Notes
 
 * The app automatically creates and updates tables in the database (`spring.jpa.hibernate.ddl-auto=update`).
